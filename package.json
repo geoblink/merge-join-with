@@ -1,0 +1,24 @@
+{
+  "name": "merge-join-with",
+  "version": "1.0.0",
+  "description": "Outer merge of two ordered arrays",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "lodash.identity": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "merge",
+    "join",
+    "arrays",
+    "utils"
+  ],
+  "author": "Geoblink",
+  "license": "ISC"
+}
