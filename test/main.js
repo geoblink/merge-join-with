@@ -1,4 +1,5 @@
 const mergeJoinWith = require('../index')
+const assert = require('assert')
 describe('Merge join with', function () {
   it('Two arrays', function () {
     var firstArray = [{a: 1, b: 2}, {a: 2, b: 2}]
@@ -11,7 +12,7 @@ describe('Merge join with', function () {
     }
     var expectedArray = [{a: 1, b: 2}, {a: 2, c: 3}, {a: 3, b: 4}]
     var result = mergeJoinWith(firstArray, secondArray, comparator, join)
-    expect(result).toEqual(expectedArray)
+    assert.deepEqual(result, expectedArray)
   })
   it('Condition on the first array', function () {
     var firstArray = [{a: 1}, {a: 2}]
@@ -21,6 +22,6 @@ describe('Merge join with', function () {
     var firstArrayJoin = el1 => null
     var expectedArray = [null, null]
     var result = mergeJoinWith(firstArray, secondArray, comparator, join, firstArrayJoin)
-    expect(result).toEqual(expectedArray)
+    assert.deepEqual(result, expectedArray)
   })
 })

@@ -1,5 +1,6 @@
 module.exports = mergeJoinWith
 var identity = require('lodash.identity')
+var isFunction = require('lodash.isfunction')
 /*
  mergeJoinWith receives two ordered strictly increasing arrays and join them using joinFunction
  comparisonFunction(a,b) returns > 0 if a > b, 0 if they have the same order
@@ -8,8 +9,8 @@ var identity = require('lodash.identity')
  option secondArrayJoin function to be run on second array elements with no data on the first array
  */
 function mergeJoinWith (firstArray, secondArray, comparisonFunction, joinFunction, firstArrayJoin, secondArrayJoin) {
-  firstArrayJoin = _.isFunction(firstArrayJoin) ? firstArrayJoin : identity
-  secondArrayJoin = _.isFunction(secondArrayJoin) ? secondArrayJoin : identity
+  firstArrayJoin = isFunction(firstArrayJoin) ? firstArrayJoin : identity
+  secondArrayJoin = isFunction(secondArrayJoin) ? secondArrayJoin : identity
   // Strategy is as follows we walk both arrays at the same time getting the smallest next. If they are equal the result is computed using the joinFunction
   var newArray = []
   var i = 0

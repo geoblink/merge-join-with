@@ -3,15 +3,12 @@
   "version": "1.0.0",
   "description": "Outer merge of two ordered arrays",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {
-    "lodash.identity": "^3.0.0"
+    "lodash.identity": "^3.0.0",
+    "lodash.isfunction": "^3.0.8"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "keywords": [
     "merge",
@@ -20,5 +17,8 @@
     "utils"
   ],
   "author": "Geoblink",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
 }
