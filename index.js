@@ -48,7 +48,6 @@ function mergeJoinWith (firstArray, secondArray, comparisonFunction, joinFunctio
       j++
       continue
     }
-    // Probably comparisonFunction does not work, we should raise an error
     break
   }
   return newArray

@@ -17,7 +17,7 @@
     "utils"
   ],
   "author": "Geoblink",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "mocha": "^3.2.0"
   }
