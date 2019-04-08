@@ -1,5 +1,7 @@
 # Merge join with
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/geoblink/merge-join-with.svg)](https://greenkeeper.io/)
+
 This library exposes a method to perform full outer joins between ordered arrays in O(n).
 
 Given two arrays
